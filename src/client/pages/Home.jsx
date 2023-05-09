@@ -32,10 +32,10 @@ export default function Home() {
 					</div>
 				</div>
 				
-				<section className="content-center container-fluid contact">
+				<div className="content-center container-fluid contact">
 					<h2 className="subheading">Contact</h2>
 					<ContactForm />
-				</section>
+				</div>
 			</div>
 	);
 }

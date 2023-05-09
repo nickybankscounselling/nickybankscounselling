@@ -12,6 +12,7 @@ Index:
 10. FAQ
 11. Contact
 12. Footer
+13. Small Screens
 */
 
 html, body {
@@ -25,6 +26,7 @@ html, body {
 /* Typography */
 body {
     font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,28 +34,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-    font-size: 2rem;
-    padding: 2rem 0 1rem 0;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
 }
 
 .subheading {
-    font-size: 1.7rem;
-    margin: 1rem 0 1rem 0;
-}
-
-p{
-    font-size: 1rem;
-}
-
-li {
-    font-size: 1rem;
+    font-size: 2.2rem;
+    margin: 1.5rem 0 1rem 0;
+    text-align: left;
 }
 
 /* Spacing */
 section {
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .content-center {
@@ -88,7 +84,6 @@ a:hover {
     border: 1px solid #f0f6f7;
     margin: 1rem 0;
     width: 12rem;
-    font-size: 1.1rem;
     padding: 8px;
     border-radius: 8px;
     text-decoration: none;
@@ -101,10 +96,7 @@ a:hover {
 
 /* Images */
 .featured-image {
-    width: 100%;
-    max-width: 100vw;
     padding: 1rem;
-    margin: 1rem 0;
 }
 
 .counselling-room-img {
@@ -119,7 +111,7 @@ a:hover {
 }
 
 .navbar-brand {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: relative;
     margin-bottom: 0.2rem;
 }
@@ -142,11 +134,6 @@ a:hover {
     background-color: #d9e9ec;
 }
 
-.navbar-toggler {
-    border: transparent;
-    text-align: center;
-}
-
 .nav-socials {
     padding: 0.5rem;
 }
@@ -158,7 +145,8 @@ a:hover {
 
 .services-home {
     background-color: #f0f6f7;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
 }
 
@@ -190,16 +178,26 @@ a:hover {
 }
 
 .profile {
-    padding-top: 0;
-    padding-bottom: 2rem;
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
 }
 
 /* Services */
+.services-heading {
+    font-size: 2rem;
+}
 
 .services-icons {
     padding: 1rem;
     margin: 2rem 0;
     color: #143c66;
+}
+
+.services-types {
+    text-align: center;
+    margin: 0;
+    padding: 2%;
 }
 
 .services-box-index {
@@ -210,16 +208,6 @@ a:hover {
 .services-box-page {
     background-color: #f0f6f7;
     border: 1rem solid white;
-}
-
-.services-heading {
-    font-size: 1.5rem;
-}
-
-.services-types {
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
-    border: transparent;
 }
 
 /* FAQ */
@@ -245,42 +233,96 @@ a:hover {
     width: 100%;
 }
 
-.contact-label, .contact-input, .contact-textarea {
-    font-size: 1.1rem;
-}
-
 .contact-socials, .social-links {
     margin: 1rem 0.5rem 0 0;
 }
 
-/* Thank You */
-
-.thank-you-bg {
-    background-color: #d9e9ec;
-    margin: 4rem;
-    padding: 3rem;
-    border: solid 3rem #f0f6f7;
-}
-
-.thank-you-button {
-    background-color: #61a9b6;
-    border-color: transparent;
-}
-
 /* Footer */
+
 #footer {
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: #d9e9ec;
 }
+
 .badges {
-    height: 90px;
-    width: auto;
-    padding: 0.5rem 1rem 1.5rem 1rem;
+    padding: 1rem;
 }
 
 .copyright {
     background-color: #61a9b6;
     padding: 1rem;
+}
+
+/* Small Screens */
+
+@media only screen and (max-width:600px)  {
+
+    /* Typography */
+
+    body {
+        font-size: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        padding: 2rem 0 1rem 0;
+    }
+
+    .subheading {
+        font-size: 1.7rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Spacing */
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    /* Images */
+
+    .featured-image-mobile {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Navigation */
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        border: transparent;
+        text-align: center;
+    }
+
+    /* Welcome */
+
+    .profile {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    /* Services */
+
+    .services-heading {
+        font-size: 1.5rem;
+    }
+
+    .services-types {
+        padding: 1rem;
+        border: transparent;
+        margin: 1rem 0;
+    }
+
+    /* Footer */
+
+    .badges {
+        height: 90px;
+        width: auto;
+        padding: 0.5rem 1rem 1.5rem 1rem;
+    }
 }
