@@ -11,7 +11,8 @@ export default function About() {
 					<div className="container-fluid">
 						<div className="row">
 							<div className="col-md-5">
-								<img src="images/about-image.png" alt="about-nicky-banks" width="370" className="featured-image" />
+								<img src="images/about-image.png" alt="about-nicky-banks" width="370" height={"100%"}
+									 className="featured-image" />
 							</div>
 							<div className="col-md-7 align-self-center">
 								<AboutIntro />

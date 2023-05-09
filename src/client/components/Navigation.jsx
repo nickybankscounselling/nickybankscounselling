@@ -6,7 +6,8 @@ export default function Navigation() {
 					<div className="container-fluid">
 						
 						<a className="navbar-brand" href="/">
-							<img id="nav-logo" src="images/logo.png" alt="Logo" width="50" height="auto" className="d-inline-block align-baseline"/>
+							<img id="nav-logo" src="images/logo.png" alt="Logo" width="50" height="auto"
+								 className="d-inline-block align-baseline"/>
 							Nicky Banks Counselling
 						</a>
 						

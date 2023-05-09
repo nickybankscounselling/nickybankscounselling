@@ -11,7 +11,8 @@ export default function Home() {
 						
 						<div className="row justify-content-center services-page-intro">
 							<div className="col-md-5">
-								<img src="images/services-image.jpg" alt="counselling-services" className="featured-image" />
+								<img src="images/services-image.jpg" alt="counselling-services" width={"100%"} height={"100%"}
+									 className="featured-image" />
 							</div>
 							<div className="col-md-7 align-self-center">
 								<ServicesIntro />

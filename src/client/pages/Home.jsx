@@ -13,7 +13,7 @@ export default function Home() {
 						</div>
 						
 						<div className="col-md-5 order-1 order-md-2">
-							<img className="profile" src="images/profile.png" alt="profile" />
+							<img className="profile" src="images/profile.png" alt="profile" width={"100%"} height={"100%"} />
 						</div>
 					</div>
 				</div>

@@ -10,7 +10,8 @@ export default function FAQ() {
 					<div className="container-fluid">
 						<div className="row faq-intro">
 							<div className="col-md-5">
-								<img src="images/faq-image.png" alt="faq" width="370" className="featured-image" />
+								<img src="images/faq-image.png" alt="faq" width="370" height={"100%"}
+									 className="featured-image" />
 							</div>
 							<div className="col-md-7 align-self-center">
 								<Intro />

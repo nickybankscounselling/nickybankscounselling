@@ -12,7 +12,7 @@ export default function CounsellingRoom() {
 						<Intro />
 						
 						<div className="content-center">
-							<img src="images/counselling-room.jpg" alt="counselling-room"
+							<img src="images/counselling-room.jpg" alt="counselling-room" width={"100%"} height={"100%"}
 								 className="counselling-room-img" />
 						</div>
 						<br />
