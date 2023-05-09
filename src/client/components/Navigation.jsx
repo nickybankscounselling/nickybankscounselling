@@ -1,4 +1,4 @@
-function Navigation() {
+export default function Navigation() {
 	return (
 		<div>
 			<nav className="navbar bg-light navbar-expand-lg navbar-light">
@@ -21,16 +21,16 @@ function Navigation() {
 									<a className="nav-link" href="/">Home</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/src/client/pages/Services">Services</a>
+									<a className="nav-link" href="/services">Services</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/src/client/pages/About">About Me</a>
+									<a className="nav-link" href="/about">About Me</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/src/client/pages/FAQ">FAQ</a>
+									<a className="nav-link" href="/faq">FAQ</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/src/client/pages/Contact">Contact</a>
+									<a className="nav-link" href="/contact">Contact</a>
 								</li>
 								<li className="nav-item">
 									<div className="nav-link nav-socials">
@@ -50,5 +50,3 @@ function Navigation() {
 		</div>
 	);
 }
-
-export default Navigation;

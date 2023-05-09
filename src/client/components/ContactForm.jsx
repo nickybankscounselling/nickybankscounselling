@@ -1,38 +1,50 @@
-import {useState} from "react";
-import axios from "axios";
+import {useRef, useState} from "react";
+import emailjs from "@emailjs/browser";
 
-function ContactForm() {
+export default function ContactForm() {
+	const form = useRef();
 	
-	const [clientName, setName] = useState();
-	const [clientEmail, setEmail] = useState();
-	const [clientMessage, setMessage] = useState();
+	const [contact, setContact] = useState({});
+	const [button, setButton] = useState("Submit");
 	
 	function handleName(event) {
-		setName(event.target.value);
+		const newName = {
+			...contact,
+			clientName: event.target.value
+		}
+		
+		setContact(newName);
 	}
 	
 	function handleEmail(event) {
-		setEmail(event.target.value);
+		const newEmail = {
+			...contact,
+			clientEmail: event.target.value
+		}
+		
+		setContact(newEmail);
 	}
 	
 	function handleMessage(event) {
-		setMessage(event.target.value);
+		const newMessage = {
+			...contact,
+			clientMessage: event.target.value
+		}
+		
+		setContact(newMessage);
 	}
 	
 	const handleClick = (event) => {
 		event.preventDefault();
+		setButton("Sending...");
 		
-		axios.post('/api/contact', {
-			clientName: clientName,
-			clientEmail: clientEmail,
-			clientMessage: clientMessage
-		  })
-		  .then(function (response) {
-			console.log(response);
-		  })
-		  .catch(function (error) {
-			console.log(error);
-		  });
+		emailjs.sendForm('service_w939o5q', 'template_r5xeorc', form.current, 'LpZBvIHaKa3icIkGq')
+		.then(function(response) {
+		   console.log('SUCCESS!', response.status, response.text);
+		   setButton("Sent!");
+		}, function(error) {
+		   console.log('FAILED...', error);
+		})
 	};
 	
 	return(
@@ -44,22 +56,21 @@ function ContactForm() {
 							className="fa-brands fa-facebook fa-lg social-links"></i></a>
 				</div>
 				
-				<form>
+				<form ref={form} onSubmit={handleClick}>
 					<label className="contact-label">Your name</label><br/>
 					<input
 							className="contact-input"
 							type="text"
 							name="clientName"
-							value={clientName}
-							onInput={handleName}
+							onChange={handleName}
 					/><br/>
 					
 					<label className="contact-label">Your email</label><br/>
 					<input
 							className="contact-input"
 							type="email"
-							value={clientEmail}
-							onInput={handleEmail}
+							onChange={handleEmail}
+							name="clientEmail"
 					/><br/>
 					
 					<label className="contact-label">Details for counselling enquiry</label><br/>
@@ -67,20 +78,16 @@ function ContactForm() {
 							className="contact-textarea"
 							rows="8"
 							cols="30"
-							value={clientMessage}
-							onInput={handleMessage}
+							onChange={handleMessage}
+							name="clientMessage"
 					></textarea><br/>
 					
 					<button
 							className="button contact-input"
-							type="button"
-							onClick={handleClick}
-					>
-						Submit
-					</button>
+							type="submit"
+							onSubmit={handleClick}
+					>{button}</button>
 				</form>
 			</div>
 	);
 }
-
-export default ContactForm;

@@ -1,4 +1,4 @@
-function Footer() {
+export default function Footer() {
 	return (
 			<div id="footer" className="container-fluid">
 				<div className="row justify-content-center">
@@ -15,5 +15,3 @@ function Footer() {
 			</div>
 	);
 }
-
-export default Footer;

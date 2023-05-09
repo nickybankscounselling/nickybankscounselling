@@ -14,7 +14,6 @@ import CovidPolicy from "./pages/CovidPolicy";
 import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Services from "./pages/Services";
-import ThankYou from "./pages/ThankYou";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
@@ -50,10 +49,6 @@ const router = createBrowserRouter([
     {
         path: "/services",
         element: <Services />,
-    },
-    {
-        path: "/thank-you",
-        element: <ThankYou />,
     },
 ]);
 

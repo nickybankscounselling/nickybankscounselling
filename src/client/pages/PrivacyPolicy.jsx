@@ -1,7 +1,4 @@
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-
-function PrivacyPolicy() {
+export default function PrivacyPolicy() {
 	return(
 			<div>
 				<section>
@@ -31,5 +28,3 @@ function PrivacyPolicy() {
 			</div>
 	);
 }
-
-export default PrivacyPolicy;
