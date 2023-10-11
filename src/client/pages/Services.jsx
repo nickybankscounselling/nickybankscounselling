@@ -1,35 +1,17 @@
 import ContactForm from "../components/ContactForm";
 import ServicesSection from "../components/ServicesSection.jsx";
-import ServicesIntro from "../content/ServicesIntro.jsx";
+import Page from "./Page.jsx";
 
 export default function Services() {
 	return(
 			<div>
+				<Page id={3} />
+				
 				<section>
-					<div className="container-fluid">
-						<h1 className="page-title">Services</h1>
-						
-						<div className="row justify-content-center services-page-intro">
-							<div className="col-md-5 featured-image">
-								<img src="images/services-image.jpg" alt="counselling-services" width={"370"} height={"auto"}
-									 className={"featured-image-mobile"} />
-							</div>
-							<div className="col-md-7 align-self-center">
-								<ServicesIntro />
-							</div>
-						</div>
-						
-						<div className={"below-intro"}>
-							<ServicesSection boxStyle={"services-box-page"} />
-						</div>
-					</div>
+					<ServicesSection boxStyle={"services-box-page"} />
 					
-					<br />
-					
-					<div style={{margin: "2%"}} >
-						<h2 className="subheading below-intro">Contact</h2>
-						<ContactForm />
-					</div>
+					<h2 style={{ marginTop: '2rem'}}>Contact</h2>
+					<ContactForm />
 				</section>
 			</div>
 	);

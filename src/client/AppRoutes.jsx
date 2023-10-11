@@ -2,16 +2,14 @@ import {Routes, Route, Outlet} from "react-router-dom";
 import Navigation from "./components/Navigation.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
-import Services from "./pages/Services.jsx";
-import About from "./pages/About.jsx";
-import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import CovidPolicy from "./pages/CovidPolicy.jsx";
+import Page from "./pages/Page.jsx";
+import Services from "./pages/Services.jsx";
+import './AppRoutes.css';
 
 function AppLayout() {
 	return (
-			<div>
+			<div className={'app'}>
 				<Navigation />
 				<Outlet />
 				<Footer />
@@ -25,12 +23,14 @@ export default function AppRoutes() {
 				<Route path={'/'} element={<AppLayout />} >
 					<Route path={''} element={<Home />} />
 					<Route path={'services'} element={<Services />} />
-					<Route path={'about'} element={<About />} />
-					<Route path={'faq'} element={<FAQ />} />
+					<Route path={'about'} element={<Page id={4} />} />
+					<Route path={'faq'} element={<Page id={5} />} />
 					<Route path={'contact'} element={<Contact />} />
 					
-					<Route path={'privacy-policy'} element={<PrivacyPolicy />} />
-					<Route path={'covid-policy'} element={<CovidPolicy />} />
+					<Route path={'counselling-room'} element={<Page id={6} />} />
+					
+					<Route path={'privacy-policy'} element={<Page id={8} />} />
+					<Route path={'covid-policy'} element={<Page id={7} />} />
 				</Route>
 			</Routes>
 	)

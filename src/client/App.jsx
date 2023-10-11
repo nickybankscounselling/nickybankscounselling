@@ -1,7 +1,7 @@
 import {Navigate, Routes, Route} from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Login from "./admin/pages/Login";
-import {getUsers} from "./admin/api.jsx";
+import {getUsers} from "./api.jsx";
 import AdminRoutes from "./admin/AdminRoutes.jsx";
 import ErrorPage from "./admin/ErrorPage.jsx";
 import AppRoutes from "./AppRoutes.jsx";
