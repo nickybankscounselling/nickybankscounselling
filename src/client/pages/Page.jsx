@@ -17,8 +17,8 @@ export default function Page({ id }) {
 					
 					<section>
 						{page.filename &&
-								<img src={'/uploads/' + page.filename} alt={page.alt} className={'float-img'}/>}
-						{parse(`<div>${page.content}</div>`)}
+								<img src={'/uploads/' + page.filename} alt={page.alt} className={'float-img'} />}
+						{ parse(`<div>${page.content}</div>`) }
 					</section>
 				</div>
 		)
