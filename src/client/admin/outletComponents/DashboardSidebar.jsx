@@ -23,7 +23,7 @@ function Logo() {
 			<div className={'row logo'}>
 				<div className={'col-3 col-md-4'}>
 					<div className={'square'}>
-						<img src={'/uploads/logo.png'} alt={'logo'} className={'round-image'} />
+						<img src={'/uploads/Square Logo.png' || '/uploads/logo.png'} alt={'logo'} className={'round-image'} />
 					</div>
 				</div>
 				<div className={'col-9 col-md-8'}>

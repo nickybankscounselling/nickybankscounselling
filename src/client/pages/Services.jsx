@@ -2,7 +2,7 @@ import ContactForm from "../components/ContactForm";
 import ServicesSection from "../components/ServicesSection.jsx";
 import ServicesIntro from "../content/ServicesIntro.jsx";
 
-export default function Home() {
+export default function Services() {
 	return(
 			<div>
 				<section>

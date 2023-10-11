@@ -113,5 +113,3 @@ export async function deletePage( id ) {
 	if (data > 0) { return 'deleted' }
 	else { return `error ` + data }
 }
-
-console.log(await getPages())
