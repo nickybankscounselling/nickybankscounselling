@@ -1,5 +1,6 @@
 import {Routes, Route} from "react-router-dom";
 import AppRoutes from "./AppRoutes.jsx";
+import {AdminRoutes} from "../admin/AdminRoutes.jsx";
 
 export default function App() {
     
@@ -11,7 +12,7 @@ export default function App() {
     
     return (
             <Routes>
-                {/*<Route path={'/nbc-admin'} element={<AdminRoutes variables={variables} />} />*/}
+                <Route path={'/nbc-admin/*'} element={<AdminRoutes variables={variables} />} />
                 <Route path={'/*'} element={<AppRoutes />} />
             </Routes>
     )

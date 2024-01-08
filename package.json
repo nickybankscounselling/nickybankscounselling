@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-starter",
+  "name": "nickybankscounselling",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -30,7 +30,7 @@
     "sequelize": "^6.33.0",
     "sequelize-bcrypt": "^1.2.0",
     "vite-express": "*",
-    "@georginabanks/web-admin": "^1.0.1"
+    "@georginabanks/webfunctions": "^1.0.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

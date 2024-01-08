@@ -2,7 +2,7 @@ import ContactForm from "../components/ContactForm";
 import ServicesSection from "../components/ServicesSection.jsx";
 import Services from "../components/Services.jsx";
 import {useEffect, useState} from "react";
-import {getPageById} from "@georginabanks/web-admin/src/client/api.jsx";
+import {getPageById} from "../../admin/api.jsx";
 import parse from "html-react-parser";
 
 export default function Home() {
