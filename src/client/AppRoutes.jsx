@@ -20,7 +20,7 @@ function AppLayout() {
 export default function AppRoutes() {
 	return (
 			<Routes>
-				<Route path={'/'} element={<AppLayout />} >
+				<Route path={''} element={<AppLayout />} >
 					<Route path={''} element={<Home />} />
 					<Route path={'services'} element={<Services />} />
 					<Route path={'about'} element={<Page id={4} />} />

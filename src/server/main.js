@@ -2,7 +2,7 @@ import ck from 'ckey';
 import express from "express";
 import ViteExpress from "vite-express";
 import fileUpload from "express-fileupload";
-import { router } from './admin/routes.js';
+import { router } from '@georginabanks/web-admin/src/server/routes.js';
 
 const app = express();
 app.use(fileUpload());

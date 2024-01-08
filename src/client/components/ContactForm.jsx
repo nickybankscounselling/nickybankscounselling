@@ -7,31 +7,12 @@ export default function ContactForm() {
 	const [contact, setContact] = useState({});
 	const [button, setButton] = useState("Submit");
 	
-	function handleName(event) {
-		const newName = {
+	const handleChange = (event) => {
+		const data = {
 			...contact,
-			clientName: event.target.value
+			[event.target.name]: event.target.value
 		}
-		
-		setContact(newName);
-	}
-	
-	function handleEmail(event) {
-		const newEmail = {
-			...contact,
-			clientEmail: event.target.value
-		}
-		
-		setContact(newEmail);
-	}
-	
-	function handleMessage(event) {
-		const newMessage = {
-			...contact,
-			clientMessage: event.target.value
-		}
-		
-		setContact(newMessage);
+		setContact(data);
 	}
 	
 	const handleClick = (event) => {
@@ -56,37 +37,34 @@ export default function ContactForm() {
 							className="fa-brands fa-facebook fa-lg social-links"></i></a>
 				</div>
 				
-				<form ref={form} onSubmit={handleClick}>
-					<label className="contact-label">Your name</label><br/>
-					<input
-							className="contact-input"
-							type="text"
-							name="clientName"
-							onChange={handleName}
-					/><br/>
+				<form ref={form} onSubmit={handleClick} className={'contact-form'}>
+					<div className="row mb-3">
+						<label className="col-sm-2 col-form-label">Your name</label>
+						<div className="col-sm-10">
+							<input className="form-control" type="text" name="clientName" onChange={handleChange}/>
+						</div>
+					</div>
 					
-					<label className="contact-label">Your email</label><br/>
-					<input
-							className="contact-input"
-							type="email"
-							onChange={handleEmail}
-							name="clientEmail"
-					/><br/>
+					<div className="row mb-3">
+						<label className="col-sm-2 col-form-label">Your email</label>
+						<div className="col-sm-10">
+							<input className="form-control" type="email" name="clientEmail" onChange={handleChange}/>
+						</div>
+					</div>
 					
-					<label className="contact-label">Details for counselling enquiry</label><br/>
-					<textarea
-							className="contact-textarea"
-							rows="8"
-							cols="30"
-							onChange={handleMessage}
-							name="clientMessage"
-					></textarea><br/>
+					<div className="row mb-3">
+						<label className="col-sm-2 col-form-label">Your phone</label>
+						<div className="col-sm-10">
+							<input className="form-control" type="tel" name="clientPhone" onChange={handleChange}/>
+						</div>
+					</div>
 					
-					<button
-							className="button contact-input"
-							type="submit"
-							onSubmit={handleClick}
-					>{button}</button>
+					<div className="mb-3">
+						<label className="form-label">Details for counselling enquiry</label>
+						<textarea className="form-control" rows="8" onChange={handleChange} name="clientMessage"></textarea>
+					</div>
+					
+					<button className="button contact-input" type="submit" onSubmit={handleClick}>{button}</button>
 				</form>
 			</div>
 	);

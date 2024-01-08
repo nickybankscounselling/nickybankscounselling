@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getPageById} from "../api.jsx";
+import {getPageById} from "@georginabanks/web-admin/src/client/api.jsx";
 import parse from 'html-react-parser';
 
 export default function Page({ id }) {

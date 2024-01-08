@@ -29,7 +29,8 @@
     "react-router-dom": "^6.16.0",
     "sequelize": "^6.33.0",
     "sequelize-bcrypt": "^1.2.0",
-    "vite-express": "*"
+    "vite-express": "*",
+    "@georginabanks/web-admin": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
