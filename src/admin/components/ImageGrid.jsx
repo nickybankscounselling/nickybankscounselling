@@ -5,7 +5,7 @@ export function ImageGrid({ images, counter, setCounter, variables }) {
 	const [buttons, setButtons] = useState({ deleteButton: 'Delete' });
 
 	const deleteImg = async ( event, id ) => {
-		await DeleteData(event, setButtons, buttons, 'images/' + img.imageId,
+		await DeleteData(event, setButtons, buttons, 'images/' + id,
 				'imageId')
 		setCounter( counter + 1 );
 	}

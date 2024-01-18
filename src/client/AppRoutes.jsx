@@ -26,11 +26,8 @@ export default function AppRoutes() {
 					<Route path={'about'} element={<Page id={4} />} />
 					<Route path={'faq'} element={<Page id={5} />} />
 					<Route path={'contact'} element={<Contact />} />
-					
 					<Route path={'counselling-room'} element={<Page id={6} />} />
-					
 					<Route path={'privacy-policy'} element={<Page id={8} />} />
-					<Route path={'covid-policy'} element={<Page id={7} />} />
 				</Route>
 			</Routes>
 	)

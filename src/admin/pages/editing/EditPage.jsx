@@ -44,7 +44,6 @@ export function EditPage({ showDelete, cookies, variables }) {
 		}, [ counter ])
 	}
 	
-	
 	// Post Data
 	
 	const deletePost = async (event) => {
@@ -55,7 +54,7 @@ export function EditPage({ showDelete, cookies, variables }) {
 	const saveDraft = async ( event ) => {
 		await PostData(event, setButtons, buttons, 'saveButton', 'Save Draft',
 				'Saving...', 'Page Saved', 'pages/' + page.pageId,
-				{ ...page, content: quill, StatusStatusId: 1, username: cookies.username }, 'pageId', setPage
+				{ ...page, content: quill, StatusStatusId: 1, UserUserId: cookies.userId }, 'pageId', setPage
 		);
 		setCounter( counter + 1);
 	}
@@ -63,7 +62,7 @@ export function EditPage({ showDelete, cookies, variables }) {
 	const publishPost = async ( event ) => {
 		await PostData( event, setButtons, buttons, 'publishButton', 'Publish',
 				'Publishing...', 'Published', 'pages/' + page.pageId,
-				{ ...page, content: quill, StatusStatusId: 2, datePublished: new Date(), username: cookies.username },
+				{ ...page, content: quill, StatusStatusId: 2, UserUserId: cookies.userId },
 				'pageId', setPage
 		);
 		setCounter( counter + 1);
