@@ -82,7 +82,7 @@ export const getImages = async ( limit ) => {
 	const data = await axios.get('/api/images', { ...axiosConfigGet, params: {
 			limit: limit
 		}});
-	return data.data.reverse();
+	return data.data;
 }
 
 export const getImageById = async ( id ) => {

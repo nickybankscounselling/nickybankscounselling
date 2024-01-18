@@ -67,6 +67,7 @@ export function AdminRoutes({ variables }) {
 					<Route path={'pages'} element={<Pages variables={variables} />}/>
 					<Route path={'posts'} element={<Posts variables={variables} />}/>
 					<Route path={'images'} element={<Images variables={variables} />}/>
+					<Route path={'images/upload'} element={<Upload variables={variables} />}/>
 					<Route path={'testimonials'} element={<Testimonials variables={variables} />}/>
 					<Route path={'users'} element={<Users cookies={cookies.user} variables={variables} />}/>
 					<Route path={'settings'} element={<Settings cookies={cookies.user} updateUser={handleLogin} />}/>
@@ -78,8 +79,7 @@ export function AdminRoutes({ variables }) {
 				
 					<Route path={'posts/:postId/edit'} element={<EditPost showDelete={true} cookies={cookies.user} variables={variables} />}/>
 					<Route path={'posts/new'} element={<EditPost showDelete={false} cookies={cookies.user} variables={variables} />}/>
-				
-					<Route path={'images/upload'} element={<Upload />}/>
+					
 					<Route path={'images/:imageId/edit'} element={<EditImage variables={variables} />}/>
 				
 					<Route path={'testimonials/:testimonialId/edit'} element={<EditTestimonial showDelete={true} variables={variables} />}/>
