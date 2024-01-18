@@ -20,7 +20,7 @@ export function Pages({ variables }) {
 				<OutletHeader newLink={'/' + variables.adminPath + '/pages/new'} newText={'New Page'} query={ query } setQuery={ setQuery } />
 				
 				{ pages.length > 0 && <PostsTable posts={ pages } title={'Page'} select={ select } setSelect={ setSelect }
-									   counter={ counter } setCounter={ setCounter } limit={ limit } setLimit={ setLimit } /> }
+									   counter={ counter } setCounter={ setCounter } limit={ limit } setLimit={ setLimit } variables={ variables } /> }
 				
 				{ pages.length >= 10 && <a onClick={ () => {
 						setLimit( limit + 10 );

@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {avatars, getUsers} from "../api.jsx";
 import {DeleteData} from "../functions/PostData.jsx";
 
-function UserRow({ user, counter, setCounter }) {
+function UserRow({ user, counter, setCounter, variables }) {
 	
 	const [buttons, setButtons] = useState({ deleteButton: 'Delete' })
 	
@@ -30,7 +30,7 @@ function UserRow({ user, counter, setCounter }) {
 				<td>{ user.permission }</td>
 				
 				<td>
-					<a href={`/admin/users/${ user.username }/edit`}>Edit</a>
+					<a href={`/${ variables.adminPath }/users/${ user.username }/edit`}>Edit</a>
 					&emsp; / &emsp;
 					<a className={'ul-link'} onClick={ deleteRow }>Delete</a>
 				</td>
@@ -38,7 +38,7 @@ function UserRow({ user, counter, setCounter }) {
 	)
 }
 
-function UsersTable({ users, counter, setCounter }) {
+function UsersTable({ users, counter, setCounter, variables }) {
 	return (
 			<div key={'usersTable'}>
 				<table className={'table computer'}>
@@ -55,7 +55,8 @@ function UsersTable({ users, counter, setCounter }) {
 					
 					<tbody>
 						{ users.map( user => {
-							return <UserRow key={'row' + user.userId } user={ user } counter={ counter } setCounter={ setCounter } />
+							return <UserRow key={'row' + user.userId } user={ user } counter={ counter }
+											setCounter={ setCounter } variables={ variables } />
 						})}
 					</tbody>
 				</table>
@@ -82,7 +83,7 @@ export function Users({ cookies, variables }) {
 				<div>
 					<OutletHeader newLink={'/' + variables.adminPath + '/users/new'} newText={'Add User'} query={ query } setQuery={ setQuery } />
 					
-					{ users.length > 0 && <UsersTable users={ users } counter={ counter } setCounter={ setCounter } /> }
+					{ users.length > 0 && <UsersTable users={ users } counter={ counter } setCounter={ setCounter } variables={ variables } /> }
 				</div>
 		)
 	} else {

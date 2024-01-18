@@ -2,7 +2,7 @@ import {DateString} from "./Datetime";
 import {DeleteData} from "../functions/PostData.jsx";
 import {useState} from "react";
 
-function Row({ post, counter, setCounter }) {
+function Row({ post, counter, setCounter, variables }) {
 	
 	const [buttons, setButtons] = useState({ deleteButton: 'Delete' });
 	
@@ -29,7 +29,7 @@ function Row({ post, counter, setCounter }) {
 				<td className={'computer'}>{ post.datePublished !== null && DateString(post.datePublished) }</td>
 				
 				<td>
-					<a href={`/admin/${url}/edit`}>Edit</a>
+					<a href={`/${ variables.adminPath }/${url}/edit`}>Edit</a>
 					&emsp; / &emsp;
 					<a className={'ul-link'} onClick={ deleteRow }>Delete</a>
 				</td>
@@ -37,7 +37,7 @@ function Row({ post, counter, setCounter }) {
 	)
 }
 
-export function PostsTable({ posts, title, counter, setCounter }) {
+export function PostsTable({ posts, title, counter, setCounter, variables }) {
 	return (
 			<div>
 				<table className={'table table-hover'}>
@@ -53,7 +53,7 @@ export function PostsTable({ posts, title, counter, setCounter }) {
 					
 					<tbody>
 						{ posts.map( p => {
-							return <Row post={p} key={ p.pageId || p.postId } counter={ counter } setCounter={ setCounter } />
+							return <Row post={p} key={ p.pageId || p.postId } counter={ counter } setCounter={ setCounter } variables={ variables } />
 						}) }
 					</tbody>
 				</table>

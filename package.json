@@ -30,7 +30,7 @@
     "sequelize": "^6.33.0",
     "sequelize-bcrypt": "^1.2.0",
     "vite-express": "*",
-    "@georginabanks/webfunctions": "^1.0.8"
+    "@georginabanks/webfunctions": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

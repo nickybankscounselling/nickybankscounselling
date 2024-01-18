@@ -1,7 +1,7 @@
 import {DeleteData} from "../functions/PostData.jsx";
 import {useState} from "react";
 
-export function ImageGrid({ images, counter, setCounter }) {
+export function ImageGrid({ images, counter, setCounter, variables }) {
 	return (
 			<div className={'row gy-3 image-grid'}>
 				{ images.map( img => {
@@ -19,7 +19,7 @@ export function ImageGrid({ images, counter, setCounter }) {
 								<div className={'thumbnail-image'}>
 									<img src={ '/uploads/' + img.filename } alt={ img.alt } />
 									<div className={'overlay'}>
-										<a href={`/admin/images/${img.imageId}/edit`}>
+										<a href={`/${ variables.adminPath }/images/${img.imageId}/edit`}>
 											<i className="fa-solid fa-pencil"></i>
 										</a>
 										<a onClick={ deleteImg } >

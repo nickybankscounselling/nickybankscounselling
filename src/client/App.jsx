@@ -7,7 +7,7 @@ export default function App() {
     const variables = {
         adminPath: 'nbc-admin',
         companyName: 'Nicky Banks Counselling',
-        logoFilename: 'logo.png'
+        logoFilename: 'Square Logo.png'
     }
     
     return (

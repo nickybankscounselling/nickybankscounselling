@@ -17,7 +17,7 @@ export function Images({ variables }) {
 			<div>
 				<OutletHeader newLink={ '/' + variables.adminPath + '/images/upload'} newText={'Upload Image'} />
 				{ images.length > 0 && <div>
-					<ImageGrid images={ images } counter={ counter } setCounter={ setCounter } />
+					<ImageGrid images={ images } counter={ counter } setCounter={ setCounter } variables={ variables } />
 					<a onClick={ () => {
 						setLimit( limit + 16 );
 						setCounter( counter + 1 );

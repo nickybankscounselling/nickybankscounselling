@@ -3,7 +3,7 @@ import { getTestimonials } from "../api.jsx";
 import {OutletHeader} from "../components/OutletHeader.jsx";
 import {DeleteData} from "../functions/PostData.jsx";
 
-function Row({ testimonial, counter, setCounter }) {
+function Row({ testimonial, counter, setCounter, variables }) {
 	
 	const [buttons, setButtons] = useState({ deleteButton: 'Delete' })
 	
@@ -23,7 +23,7 @@ function Row({ testimonial, counter, setCounter }) {
 				<td>{ testimonial.title }</td>
 				
 				<td>
-					<a href={`/admin/testimonials/${ testimonial.testimonialId }/edit`}>Edit</a>
+					<a href={`/${ variables.adminPath }/testimonials/${ testimonial.testimonialId }/edit`}>Edit</a>
 					&ensp; / &ensp;
 					<a className={'ul-link'} onClick={ deleteRow }>Delete</a>
 				</td>
@@ -60,7 +60,7 @@ export function Testimonials({ variables }) {
 					<tbody>
 					{testimonials.map(t => {
 						return <Row testimonial={ t } key={ t.testimonialId } select={ select } setSelect={ setSelect }
-									counter={ counter } setCounter={ setCounter } />
+									counter={ counter } setCounter={ setCounter } variables={ variables } />
 					})}
 					</tbody>
 				</table> }

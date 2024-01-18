@@ -28,7 +28,7 @@ export function Posts({ variables }) {
 				
 				{ posts.length > 0
 						&& <PostsTable posts={ posts } title={'Post'} select={ select } setSelect={ setSelect }
-									   counter={ counter } setCounter={ setCounter } limit={ limit } setLimit={ setLimit }/> }
+									   counter={ counter } setCounter={ setCounter } limit={ limit } setLimit={ setLimit } variables={ variables }/> }
 				
 				{ posts.length >= 10 && <a onClick={ () => {
 						setLimit( limit + 10 );
